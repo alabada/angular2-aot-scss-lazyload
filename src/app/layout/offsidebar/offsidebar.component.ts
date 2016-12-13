@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SettingsService } from '../../core/settings/settings.service';
 
 @Component({
     selector: 'app-offsidebar',
@@ -10,8 +11,7 @@ export class OffsidebarComponent implements OnInit {
     currentTheme: any ;
     selectedLanguage: string;
 
-    constructor() {
-
+    constructor(public settings: SettingsService) {
     }
 
     ngOnInit() { }

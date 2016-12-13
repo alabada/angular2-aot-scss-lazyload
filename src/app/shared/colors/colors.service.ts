@@ -24,7 +24,7 @@ export class ColorsService {
 
     constructor() { }
 
-    byName(name) {
+    byName(name: any) {
         // console.log(name +' -> ' + this.APP_COLORS[name])
         return (this.APP_COLORS[name] || '#fff');
     }

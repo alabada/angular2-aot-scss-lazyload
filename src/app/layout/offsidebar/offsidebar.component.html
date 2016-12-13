@@ -5,7 +5,7 @@
         <div class="col mb">
             <div class="setting-color">
                 <label>
-                    <input type="radio" name="setting-theme" (ngModelChange)="setTheme()" value="A" />
+                    <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()" value="A" />
                     <span class="icon-check"></span>
                     <span class="split">
                   <span class="color bg-info"></span>
@@ -18,7 +18,7 @@
         <div class="col mb">
             <div class="setting-color">
                 <label>
-                    <input type="radio" name="setting-theme"  (ngModelChange)="setTheme()" value="B" />
+                    <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()" value="B" />
                     <span class="icon-check"></span>
                     <span class="split">
                   <span class="color bg-green"></span>
@@ -31,7 +31,7 @@
         <div class="col mb">
             <div class="setting-color">
                 <label>
-                    <input type="radio" name="setting-theme"  (ngModelChange)="setTheme()" value="C" />
+                    <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()" value="C" />
                     <span class="icon-check"></span>
                     <span class="split">
                   <span class="color bg-purple"></span>
@@ -44,7 +44,7 @@
         <div class="col mb">
             <div class="setting-color">
                 <label>
-                    <input type="radio" name="setting-theme"  (ngModelChange)="setTheme()" value="D" />
+                    <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()" value="D" />
                     <span class="icon-check"></span>
                     <span class="split">
                   <span class="color bg-danger"></span>
@@ -59,7 +59,7 @@
         <div class="col mb">
             <div class="setting-color">
                 <label>
-                    <input type="radio" name="setting-theme"  (ngModelChange)="setTheme()" value="E" />
+                    <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()" value="E" />
                     <span class="icon-check"></span>
                     <span class="split">
                   <span class="color bg-info-dark"></span>
@@ -72,7 +72,7 @@
         <div class="col mb">
             <div class="setting-color">
                 <label>
-                    <input type="radio" name="setting-theme" (ngModelChange)="setTheme()" value="F" />
+                    <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()" value="F" />
                     <span class="icon-check"></span>
                     <span class="split">
                   <span class="color bg-green-dark"></span>
@@ -85,7 +85,7 @@
         <div class="col mb">
             <div class="setting-color">
                 <label>
-                    <input type="radio" name="setting-theme"  (ngModelChange)="setTheme()" value="G" />
+                    <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()" value="G" />
                     <span class="icon-check"></span>
                     <span class="split">
                   <span class="color bg-purple-dark"></span>
@@ -98,7 +98,7 @@
         <div class="col mb">
             <div class="setting-color">
                 <label>
-                    <input type="radio" name="setting-theme"  (ngModelChange)="setTheme()" value="H" />
+                    <input type="radio" name="setting-theme" [(ngModel)]="currentTheme" (ngModelChange)="setTheme()" value="H" />
                     <span class="icon-check"></span>
                     <span class="split">
                   <span class="color bg-danger-dark"></span>
@@ -116,7 +116,7 @@
         <p class="pull-left">Fixed</p>
         <div class="pull-right">
             <label class="switch">
-                <input type="checkbox" />
+                <input type="checkbox" [(ngModel)]="settings.layout.isFixed"/>
                 <span></span>
             </label>
         </div>
@@ -125,7 +125,7 @@
         <p class="pull-left">Boxed</p>
         <div class="pull-right">
             <label class="switch">
-                <input type="checkbox" />
+                <input type="checkbox" [(ngModel)]="settings.layout.isBoxed"/>
                 <span></span>
             </label>
         </div>
@@ -142,13 +142,13 @@
     </div>
     -->
 </div>
-<div class="p">
+<div class="p" *ngIf="!settings.layout.horizontal">
     <h4 class="text-muted text-thin">Aside</h4>
     <div class="clearfix">
         <p class="pull-left">Collapsed</p>
         <div class="pull-right">
             <label class="switch">
-                <input type="checkbox" />
+                <input type="checkbox" [(ngModel)]="settings.layout.isCollapsed" [disabled]="settings.layout.isCollapsedText"/>
                 <span></span>
             </label>
         </div>
@@ -157,7 +157,7 @@
         <p class="pull-left">Collapsed Text</p>
         <div class="pull-right">
             <label class="switch">
-                <input type="checkbox" />
+                <input type="checkbox" [(ngModel)]="settings.layout.isCollapsedText" [disabled]="settings.layout.isCollapsed"/>
                 <span></span>
             </label>
         </div>
@@ -166,7 +166,7 @@
         <p class="pull-left">Float</p>
         <div class="pull-right">
             <label class="switch">
-                <input type="checkbox" />
+                <input type="checkbox" [(ngModel)]="settings.layout.isFloat"/>
                 <span></span>
             </label>
         </div>
@@ -175,7 +175,7 @@
         <p class="pull-left">Hover</p>
         <div class="pull-right">
             <label class="switch">
-                <input type="checkbox"/>
+                <input type="checkbox" [(ngModel)]="settings.layout.asideHover"/>
                 <span></span>
             </label>
         </div>
@@ -184,7 +184,7 @@
         <p class="pull-left">Show Scrollbar</p>
         <div class="pull-right">
             <label class="switch">
-                <input type="checkbox"/>
+                <input type="checkbox" [(ngModel)]="settings.layout.asideScrollbar"/>
                 <span></span>
             </label>
         </div>
@@ -192,6 +192,7 @@
 </div>
 <div class="p">
     <h4 class="text-muted text-thin">Language</h4>
-    <select class="form-control" (ngModelChange)="setLang($event)">
+    <select class="form-control" [ngModel]="selectedLanguage" (ngModelChange)="setLang($event)">
+        <option [value]="lang.code" *ngFor="let lang of getLangs()">{{lang.text}}</option>
     </select>
 </div>
