@@ -38,3 +38,7 @@ Thumbs.db
 /aot/dist/*
 /aot/node_modules/*
 /aot/src/*
+
+# *.js *.map
+/src/*.js
+/src/*.map
