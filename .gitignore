@@ -40,5 +40,5 @@ Thumbs.db
 /aot/src/*
 
 # *.js *.map
-/src/*.js
-/src/*.map
+/src/**/*.js
+/src/**/*.map
