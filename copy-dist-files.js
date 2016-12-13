@@ -3,7 +3,8 @@ var resources = [
     'node_modules/core-js/client/shim.min.js',
     'node_modules/core-js/client/shim.min.js.map',
     'node_modules/zone.js/dist/zone.min.js',
-    'src/styles.css'
+    'src/styles.css',
+    'src/styles.css.map'
 ];
 resources.map(function(f) {
     var path = f.split('/');
