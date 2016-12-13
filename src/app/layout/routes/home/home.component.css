@@ -1,0 +1,13 @@
+/* ========================================================================
+     Component: media-queries
+ ========================================================================== */
+.home-container {
+  margin: 0 auto;
+  max-width: 970px; }
+  .home-container .home-logo {
+    width: 240px; }
+  @media only screen and (max-width: 768px) {
+    .home-container .home-text {
+      text-align: center; } }
+
+/*# sourceMappingURL=home.component.css.map */
