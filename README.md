@@ -38,3 +38,7 @@ To get more help on the `angular-cli` use `ng --help` or go check out the [Angul
 ######node copy-dist-file.js
 ######npm run build:aot
 ######npm run lite:aot
+
+# how to handle scss file
+we'll use ruby to compile scss file to css file.
+if you want to know more about ruby, google it.
