@@ -42,3 +42,6 @@ Thumbs.db
 # *.js *.map
 /src/**/*.js
 /src/**/*.map
+
+# .sass-cache
+/src/**/.sass-cache
