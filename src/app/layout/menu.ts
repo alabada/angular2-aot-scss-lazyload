@@ -1,4 +1,3 @@
-
 const Home = {
     text: 'Home',
     link: '/home',
@@ -6,9 +5,9 @@ const Home = {
 };
 
 const Hero = {
-  text: 'Hero',
-  link: '/hero',
-  icon: 'fa fa-file-o'
+    text: 'Hero',
+    link: '/hero',
+    icon: 'fa fa-file-o'
 };
 
 const Dashboard = {
@@ -189,41 +188,36 @@ const Maps = {
     ]
 };
 
-const Pages = {
-    text: 'Pages',
-    link: '/pages',
-    icon: 'icon-doc',
-    submenu: [
-        {
-            text: 'Login',
-            link: '/login'
-        },
-        {
-            text: 'Register',
-            link: '/register'
-        },
-        {
-            text: 'Recover',
-            link: '/recover'
-        },
-        {
-            text: 'Lock',
-            link: '/lock'
-        },
-        {
-            text: '404',
-            link: '/404'
-        },
-        {
-            text: '500',
-            link: '/500'
-        },
-        {
-            text: 'Maintenance',
-            link: '/maintenance'
-        }
-    ]
+
+const Login = {
+    text: 'Login',
+    link: '/login'
 };
+const Register = {
+    text: 'Register',
+    link: '/register'
+};
+const Recover = {
+    text: 'Recover',
+    link: '/recover'
+};
+const Lock = {
+    text: 'Lock',
+    link: '/lock'
+};
+const a404 = {
+    text: '404',
+    link: '/404'
+};
+const a500 = {
+    text: '500',
+    link: '/500'
+};
+const Maintenance = {
+    text: 'Maintenance',
+    link: '/maintenance'
+};
+
 
 const headingMain = {
     text: 'Main Navigation',
@@ -253,5 +247,11 @@ export default [
     Tables,
     Maps,
     headingMore,
-    Pages
+    Login,
+    Register,
+    Recover,
+    Lock,
+    a404,
+    a500,
+    Maintenance,
 ];

@@ -16,6 +16,12 @@ import {HomeComponent} from "./routes/home/home.component";
 import {SettingsService} from "../core/settings/settings.service";
 import {SharedModule} from "../shared/shared.module";
 import {HeroModule} from "./routes/hero/hero.module";
+import {Error500Component} from "./routes/pages/error500/error500.component";
+import {Error404Component} from "./routes/pages/error404/error404.component";
+import {LockComponent} from "./routes/pages/lock/lock.component";
+import {LoginComponent} from "./routes/pages/login/login.component";
+import {MaintenanceComponent} from "./routes/pages/maintenance/maintenance.component";
+import {RecoverComponent} from "./routes/pages/recover/recover.component";
 
 @NgModule({
     imports: [
@@ -35,6 +41,12 @@ import {HeroModule} from "./routes/hero/hero.module";
 
         // routes
         HomeComponent,
+        Error404Component,
+        Error500Component,
+        LockComponent,
+        LoginComponent,
+        MaintenanceComponent,
+        RecoverComponent
     ],
     providers: [
         UserblockService,
