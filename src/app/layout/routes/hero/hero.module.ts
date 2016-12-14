@@ -7,17 +7,17 @@ import {CrisisCenterModule} from "./crisis-center/crisis-center.module";
 import {DialogService} from "./dialog.service";
 
 @NgModule({
-  imports: [
-    HeroRoutingModule,
-    HeroesModule,
-    CrisisCenterModule,
-  ],
-  declarations: [
-    HeroComponent,
-  ],
-  providers: [
-    DialogService
-  ]
+    imports: [
+        HeroRoutingModule,
+        HeroesModule,
+        CrisisCenterModule,
+    ],
+    declarations: [
+        HeroComponent,
+    ],
+    providers: [
+        DialogService
+    ]
 })
 export class HeroModule {
 }

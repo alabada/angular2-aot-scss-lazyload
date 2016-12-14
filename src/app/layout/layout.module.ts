@@ -15,11 +15,14 @@ import appMenu from "./menu";
 import {HomeComponent} from "./routes/home/home.component";
 import {SettingsService} from "../core/settings/settings.service";
 import {SharedModule} from "../shared/shared.module";
+import {HeroModule} from "./routes/hero/hero.module";
 
 @NgModule({
     imports: [
         SharedModule,
         LayoutRoutingModule,
+
+        HeroModule
     ],
     declarations: [
         LayoutComponent,

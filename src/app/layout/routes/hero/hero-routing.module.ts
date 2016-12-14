@@ -7,7 +7,7 @@ import {crisisCenterRoutes} from "./crisis-center/crisis-center-routing.module";
 
 export const heroRoutes: Routes = [
     {
-        path: '',
+        path: 'hero',
         component: HeroComponent,
         children: [
             ...heroesRoutes,
